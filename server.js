@@ -94,7 +94,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 app.get('/:articlename', function (req, res) {
-    var articlename= reg.param.articlename;
+    var articlename= req.params.articlename;
   res.send(createTemplate(articles[articlename]));
 });
 
