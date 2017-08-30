@@ -83,6 +83,13 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
+var button=document.getElementById('counter');
+button.onclick=function(){
+    counter=counter+1;
+    var span= document.getElementById('count');
+    span.innerHTML=counter.tostring();
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -107,6 +114,8 @@ app.get('/:articlename', function (req, res) {
     var articlename= req.params.articlename;
   res.send(createTemplate(articles[articlename]));
 });
+
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
