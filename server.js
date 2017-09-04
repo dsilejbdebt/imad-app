@@ -83,9 +83,10 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-var button=document.getElementById('counter');
+var counters=0;
+var button=document.getElementById('counters');
 button.onclick=function(){
-    counter=counter+1;
+    counters=counters+1;
     var span= document.getElementById('count');
     span.innerHTML=counter.tostring();
 };
