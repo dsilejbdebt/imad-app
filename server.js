@@ -83,13 +83,14 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-var counters=0;
+/*var counters=0;
 var button=document.getElementById('counters');
 button.onclick=function(){
     counters=counters+1;
     var span= document.getElementById('count');
     span.innerHTML=counter.tostring();
-};
+};*/
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
